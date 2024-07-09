@@ -1,0 +1,4 @@
+﻿cd Vk.Data -> dotnet ef migrations add Initial -s ../VkApi/    -- new migration file generator
+cd sln -> cd ..   -- apply migrations files to database
+cd ..
+dotnet ef database update --project  "./Vk.Data" --startup-project "./VkApi"
