@@ -46,6 +46,8 @@ const AddModal = (props: any) => {
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    product.price =  parseInt(product.price)
+    product.popularity = parseInt(product.popularity)
     e.preventDefault(); // Prevent default form submission
 
     // Check if all required fields are filled

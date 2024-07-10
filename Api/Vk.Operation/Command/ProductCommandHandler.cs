@@ -49,6 +49,8 @@ public class ProductCommandHandler :
         entity.ProductType = request.Model.ProductType;
         entity.ProductBrand = request.Model.ProductBrand;
         entity.Color = request.Model.Color;
+        entity.Popularity = request.Model.Popularity;
+
         await dbContext.SaveChangesAsync(cancellationToken);
         return new ApiResponse();
     }
